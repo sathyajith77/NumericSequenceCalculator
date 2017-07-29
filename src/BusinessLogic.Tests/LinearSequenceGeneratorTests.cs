@@ -40,7 +40,7 @@ namespace BusinessLogic.Tests
             };
 
             // Assert
-            Assert.Throws<ArgumentException>(testAct);
+            Assert.Throws<ArgumentOutOfRangeException>(testAct);
         }
 
     }

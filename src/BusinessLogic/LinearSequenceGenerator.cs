@@ -10,7 +10,12 @@ namespace BusinessLogic
     {
         public int GenerateNext(int current)
         {
+            if(current <0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(current));
+            }
             current += 1;
+
             return current;
         }
     }
