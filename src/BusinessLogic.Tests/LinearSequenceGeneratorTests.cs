@@ -27,5 +27,21 @@ namespace BusinessLogic.Tests
             Assert.AreEqual(expected, result);
         }
 
+        [Test]       
+        public void SequenceGenerator_ShouldNotGenerateSequence_WhenCalledWithNegativeInput()
+        {
+            // Arrange
+            var sequenceGenerator = new LinearSequenceGenerator();
+
+            // Act
+            TestDelegate testAct = () =>
+            {
+                int result = sequenceGenerator.GenerateNext(-1);
+            };
+
+            // Assert
+            Assert.Throws<ArgumentException>(testAct);
+        }
+
     }
 }
