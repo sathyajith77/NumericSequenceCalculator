@@ -10,7 +10,8 @@ namespace BusinessLogic
     {
         public int GenerateNext(int current)
         {
-            return 0;
+            current += 1;
+            return current;
         }
     }
 }
